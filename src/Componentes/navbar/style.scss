@@ -1,0 +1,81 @@
+$width_total:100%;
+$color_primary:#676767;
+$color_secundary:#b97a56;
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin hover {
+    :hover{
+    color:$color_secundary;
+    }
+}
+
+
+.imagen{
+    width: $width_total;
+    height: 40px;
+    background-image: url(https://calla.qodeinteractive.com/wp-content/uploads/2018/03/header-top-bar-background.jpg);
+}
+
+.logo{
+    @include center;
+    height: 94px;
+
+    img{
+        display: flex;
+        width: 317px;
+        height: 34px;
+
+    }
+}
+
+.navbar{
+    height: 67px;
+    @include center;
+    flex-flow: row;
+    justify-content: space-between;
+    //por resolver
+    margin-left: 5%;
+    margin-right: 5%;
+
+    .menuList{
+        display: flex;
+        flex-flow: row nowrap;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 40px;
+        letter-spacing: .1em;
+
+        &>li:hover{
+        color:$color_secundary;  
+      }
+    }
+ 
+    .social,.searchCard{
+        display: flex;
+        justify-content: space-between;
+        width: 80px;
+        
+    }
+
+      
+    .searchCard{
+        font-size: 20px;
+        line-height: 27px;
+        font-weight: 300;
+        color: $color_primary;
+               
+    }
+    
+    .search,.cart,.list{
+        @include hover()
+
+    }
+    
+}
+
